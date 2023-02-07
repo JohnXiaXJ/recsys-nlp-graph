@@ -27,13 +27,15 @@ def parse_json_to_df(path: str) -> pd.DataFrame:
         i += 1
         if i % 10000 == 0:
             logger.info('Rows processed: {:,}'.format(i))
+        if i % 100000 == 0:
+            break
 
     df = pd.DataFrame.from_dict(df_dict, orient='index')
 
     # Lowercase
-    df['related'] = df['related'].astype(str)
-    df['categories'] = df['categories'].astype(str)
-    df['salesRank'] = df['salesRank'].astype(str)
+    #df['related'] = df['related'].astype(str)
+    #df['categories'] = df['categories'].astype(str)
+    #df['salesRank'] = df['salesRank'].astype(str)
     df = lowercase_df(df)
 
     return df
