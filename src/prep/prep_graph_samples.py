@@ -35,7 +35,7 @@ def create_transition_matrix(graph):
     Returns:
 
     """
-    adjacency_mat = networkx.adj_matrix(graph)
+    adjacency_mat = networkx.adjacency_matrix(graph)
     logger.info('Adjacency matrix shape: {}'.format(adjacency_mat.shape))
     graph = None
 
