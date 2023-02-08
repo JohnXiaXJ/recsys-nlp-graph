@@ -27,8 +27,6 @@ def parse_json_to_df(path: str) -> pd.DataFrame:
         i += 1
         if i % 10000 == 0:
             logger.info('Rows processed: {:,}'.format(i))
-        if i % 30000 == 0:
-            break
 
     df = pd.DataFrame.from_dict(df_dict, orient='index')
 
