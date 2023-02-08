@@ -1,2 +1,2 @@
-DATA_PATH = 'data'
-MODEL_PATH = 'model'
+DATA_PATH = '/content/data'
+MODEL_PATH = '/content/model'
