@@ -20,7 +20,7 @@ initial_lr = 0.01
 
 # Torch parameters
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-torch.cuda.set_device(1)  # Set to use 2nd GPU
+torch.cuda.set_device(0)  # Set to use 1st GPU
 logger.info('Device: {}, emb_dim: {}, epochs: {}, initial_lr: {}'.format(device, emb_dim, epochs, initial_lr))
 
 if __name__ == '__main__':
