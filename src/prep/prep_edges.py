@@ -9,8 +9,8 @@ import pandas as pd
 from src.utils.logger import logger
 
 relationship_weights = {'bought_together': 1.2,
-                        'also_bought': 1.0,
-                        'also_viewed': 0.5}
+                        'also_buy': 1.0,
+                        'also_view': 0.5}
 
 
 def create_product_pair(df, col_list):
